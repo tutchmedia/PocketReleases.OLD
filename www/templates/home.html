@@ -1,5 +1,6 @@
 <ion-view title="Dashboard">
-    <ion-content overflow-scroll="false" padding="false" class="has-header">       
+    <ion-content overflow-scroll="false" padding="false" class="has-header">
+        <div ng-hide="online">You're offline</div>     
         
         <div class="card home-card" ng-repeat="featured in gamesFeatured">
             <div class="item item-text-wrap" style="background-image:url('{{featured.attributes.gameHeader}}')">

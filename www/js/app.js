@@ -7,14 +7,28 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $window) {
   $ionicPlatform.ready(function() {
     // Do app live stuff
     
     Parse.initialize("UTz1BF2IsVJVan7MCZdp2jr8TOg4IQpMEMoNCPuV");
     Parse.serverURL = 'http://dash.projectstudios.co.uk:1337/parse'
       
-      
+    // Check for online
+    
+    
+    $rootScope.online = navigator.onLine;
+      $window.addEventListener("offline", function() {
+        $rootScope.$apply(function() {
+          $rootScope.online = false;
+        });
+      }, false);
+
+      $window.addEventListener("online", function() {
+        $rootScope.$apply(function() {
+          $rootScope.online = true;
+        });
+      }, false);
       
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
