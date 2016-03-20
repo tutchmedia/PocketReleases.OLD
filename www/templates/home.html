@@ -1,0 +1,20 @@
+<ion-view title="Dashboard">
+    <ion-content overflow-scroll="false" padding="false" class="has-header">       
+        
+        <div class="card home-card" ng-repeat="featured in gamesFeatured">
+            <div class="item item-text-wrap" style="background-image:url('{{featured.attributes.gameHeader}}')">
+                <div class="card_detail">
+                    {{featured.attributes.gameTitle}}
+                    
+                    <div class="item-date">
+                    <span class="item-date-day">
+                      {{featured.attributes.release_uk | date:'dd'}}
+                      <span class="item-date-month">{{featured.attributes.release_uk | date:'MMM'}}</span>
+                    </span>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

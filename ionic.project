@@ -1,0 +1,12 @@
+{
+  "name": "PocketReleases",
+  "app_id": "4c09fecb",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

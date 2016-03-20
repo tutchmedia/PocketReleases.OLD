@@ -1,0 +1,148 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.bar-custom {
+    height:80px !important;
+    background-color:#544b8b !important;
+    color:#ffffff !important;
+    padding-top: 20px;
+    border-bottom:1px solid #393072 !important;
+}
+.side-menu-left {
+    background-color: #8f90a0;
+}
+.menu .padding {
+    padding: 30px 0px 30px 10px;
+}
+.logo {
+    text-align: center;
+    font-size: 38px;
+}
+.menu .item.item_search {
+    padding: 0px 30px;
+}
+.menu .item.item_search .icon {
+    font-size: 28px;
+    margin-right: 10px;
+}
+::-webkit-input-placeholder {
+   text-transform: uppercase;
+}
+.menu .item {
+    border:0px;
+    height:70px;
+    vertical-align: middle;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.menu .item .item-content {
+    padding-top:22px;
+    text-transform:uppercase;
+    font-weight: 500;
+    color:#bebcc5;
+}
+.menu .item .item-content .icon {
+    font-size: 28px;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+.menu .item.active {
+    border-left:3px #41387f solid;
+    background-color: #f3f3f9;
+    margin-left:-1px;
+}
+.menu .item.active .item-content {
+    background-color:transparent;
+    color:#65648e !important;
+}
+.title {
+    top: 20px !important;
+    text-transform: uppercase;
+    color:#ffffff !important;
+}
+.background, .background .pane, .background .item-complex .item-content{
+    background-color: #41377f;
+}
+.has-header {
+    top:80px !important;
+}
+.home_header {
+    font-size: 14px !important;
+}
+.bar-stable .button.button-clear {
+    color:#FFFFFF;
+}
+.home-card {
+    margin:0px !important;
+}
+.home-card, .home-card .item {
+    height:100px;
+    color:#FFFFFF;
+    background-size:cover;
+    padding: 0px;
+}
+.home-card, .home-card .item::before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, 0.5);
+}
+.card_detail {
+    margin-top: -100px;
+    z-index: 2;
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+}
+.item-date {
+	border:2px solid rgba(255,255,255,0.7);
+	float: right;
+	border-radius: 25px;
+	height:50px;
+	width:50px;
+	text-align: center !important;
+	line-height: 40px;
+    margin-top:10px;
+}
+.item-date-day {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 40px;
+}
+.item-date-month {
+	font-size: 8px;
+	text-transform: uppercase;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	padding-top: 13px;
+	margin-left: -18px;
+}
