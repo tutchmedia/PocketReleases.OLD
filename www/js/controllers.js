@@ -4,8 +4,8 @@ angular.module('app.controllers', [])
   
   
   $scope.items = [
-    {title: "dashboard", href: "home", icon:"ion-home"},
-    {title: "catalogue", href: "cart", icon: "ion-erlenmeyer-flask"},
+    {title: "dashboard", href: "home", icon:"ion-ios-home-outline"},
+    {title: "My Card", href: "cart", icon: "ion-card"},
     {title: "account", href: "cloud", icon:"ion-waterdrop"},
     {title: "settings", href: "settings", icon:"ion-gear-a"}
   ];
@@ -17,9 +17,7 @@ angular.module('app.controllers', [])
     
     
      $scope.gamesFeatured = [];
-     
-     $rootScope.online = false;
-        
+             
     if(!$rootScope.online)
     {
         console.log("OFFLINE");
@@ -33,23 +31,7 @@ angular.module('app.controllers', [])
     } else {
         // Online Stuff
         
-        var Games = Parse.Object.extend("games");
-        var query = new Parse.Query(Games);
-        query.greaterThan("release_uk", new Date());
-        query.find({
-        success: function(results) {
-            // Do something with the returned Parse.Object values
-            for (var i = 0; i < results.length; i++) {
-            var object = results[i];
-                //alert(object.id + ' - ' + object.get('playerName'));
-                $scope.gamesFeatured.push(object);
-            }
-            
-        },
-        error: function(error) {
-            alert("Error: " + error.code + " " + error.message);
-        }
-        });
+        
     }
     
 })

@@ -11,8 +11,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
   $ionicPlatform.ready(function() {
     // Do app live stuff
     
-    Parse.initialize("UTz1BF2IsVJVan7MCZdp2jr8TOg4IQpMEMoNCPuV");
-    Parse.serverURL = 'http://dash.projectstudios.co.uk:1337/parse'
+        Stamplay.init("altgamingbar");
       
     // Check for online
     

@@ -9,12 +9,11 @@
         <ion-nav-view name="side-menu21" class="background"></ion-nav-view>
     </ion-side-menu-content>
     <ion-side-menu side="left">
-        <ion-content padding="true" class="side-menu-left">
+        <ion-content padding="false" class="side-menu-left menu-bg">
             <div class="row responsive-sm">
-                <div class="col logo"><i class="icon ion-fireball"></i></div>
+                <div class="col logo"><img src="../img/logo.png" /></div>
             </div>
             <ion-list>
-                <ion-item class="item_search"><label class="item item-input"><i class="icon ion-search placeholder-icon"></i> <input type="text" placeholder="Search"></label></ion-item>
                 <ion-item ui-sref="pocketReleases.{{item.href}}" ui-sref-active="active" menu-close="" ng-repeat="item in items" ><i class="icon {{item.icon}}"></i> {{item.title}}</ion-item>
             </ion-list>
         </ion-content>
