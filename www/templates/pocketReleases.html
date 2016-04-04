@@ -11,7 +11,7 @@
     <ion-side-menu side="left">
         <ion-content padding="false" class="side-menu-left menu-bg">
             <div class="row responsive-sm">
-                <div class="col logo"><img src="../img/logo.png" /></div>
+                <div class="col logo"><div class="logo-inner"></div></div>
             </div>
             <ion-list>
                 <ion-item ui-sref="pocketReleases.{{item.href}}" ui-sref-active="active" menu-close="" ng-repeat="item in items" ><i class="icon {{item.icon}}"></i> {{item.title}}</ion-item>

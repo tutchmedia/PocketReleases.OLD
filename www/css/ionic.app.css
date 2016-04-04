@@ -9112,11 +9112,13 @@ a.button {
   text-align: center;
   font-size: 38px;
   height:120px;
-  padding:20px;
+  padding:30px 50px;
   color:#fff;
-  padding-top:30px;
 }
-.logo img {
+.logo-inner {
+    background-image:url("../img/logo.png");
+    background-size: 160px 80px;
+    background-repeat: no-repeat;
     height:80px;
 }
 
